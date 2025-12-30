@@ -1,1 +1,49 @@
+@import url("https://use.typekit.net/vwf7pyn.css");
+
+@font-face {
+    font-family: eddie;
+    src: url("edwardian.ttf");
+}
+
 @import "tailwindcss";
+
+
+@theme {
+    --color-primary-dark: #7b7b52;
+    --color-primary-light: #a7a573;
+    --color-secondary-dark: #5d202c;
+    --color-secondary-light: #ad857e;
+    --color-accent: #e8ddcc;
+    --font-eddie: "eddie";
+    --font-minion: "minion-pro";
+}
+
+@layer base {
+    h1 {
+        @apply text-8xl leading-[0.8] font-minion;
+    }
+
+    h2 {
+        @apply text-7xl font-eddie;
+    }
+
+    h3 {
+        @apply text-4xl font-minion;
+    }
+
+    h4 {
+        @apply text-3xl font-minion font-bold italic;
+    }
+
+    h5 {
+        @apply text-6xl font-minion font-bold italic;
+    }
+
+    h6 {
+        @apply text-4xl font-minion font-bold italic;
+    }
+
+    p {
+        @apply text-2xl font-minion font-bold italic;
+    }
+}

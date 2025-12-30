@@ -1,0 +1,13 @@
+<nav class="w-full flex items-center justify-between p-4 h-[12.5vh]">
+  <%= link_to root_path, class: "h-full flex items-center" do %>
+    <%= image_tag "logo.png",
+          alt: "Home",
+          class: "h-full w-auto object-contain" %>
+  <% end %>
+
+  <ul class="flex gap-12 font-minion text-4xl pr-4">
+    <li><%= link_to "TRAVEL & STAY", root_path %></li>
+    <li><%= link_to "EVENT SCHEDULE", "#" %></li>
+    <li><%= link_to "FAQ", "#" %></li>
+  </ul>
+</nav>
