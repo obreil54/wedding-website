@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#home"
 
-  get "pages/travel", to: "pages#travel", as: "travel"
+  get "travel", to: "pages#travel", as: "travel"
+  get "faq", to: "pages#faq", as: "faq"
 end

@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def travel
   end
+
+  def faq
+  end
 end
