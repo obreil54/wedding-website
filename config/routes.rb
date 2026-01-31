@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#home"
 
+  get "welcome", to: "pages#welcome", as: "welcome"
+  post "welcome", to: "pages#unlock", as: "unlock"
   get "travel", to: "pages#travel", as: "travel"
   get "faq", to: "pages#faq", as: "faq"
+  get "event", to: "pages#event", as: "event"
 end

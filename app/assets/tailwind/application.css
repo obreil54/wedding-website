@@ -20,15 +20,33 @@
 
 @layer base {
     h1 {
-        @apply text-8xl leading-[0.8] font-minion;
+        @apply text-5xl leading-[0.8] font-minion;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            @apply text-8xl leading-[0.8] font-minion;
+        }
     }
 
     h2 {
-        @apply text-7xl font-eddie;
+        @apply text-5xl leading-[0.8] font-eddie;
+    }
+
+    @media (min-width: 768px) {
+        h2 {
+            @apply text-7xl leading-[0.8] font-eddie;
+        }
     }
 
     h3 {
-        @apply text-4xl font-minion;
+        @apply text-2xl leading-[0.8] font-minion;
+    }
+
+    @media (min-width: 768px) {
+        h3 {
+            @apply text-4xl leading-[0.8] font-minion;
+        }
     }
 
     h4 {
@@ -36,14 +54,32 @@
     }
 
     h5 {
-        @apply text-6xl font-minion font-bold italic;
-    }
-
-    h6 {
         @apply text-4xl font-minion font-bold italic;
     }
 
-    p {
+    @media (min-width: 768px) {
+        h5 {
+            @apply text-6xl font-bold italic;
+        }
+    }
+
+    h6 {
         @apply text-2xl font-minion font-bold italic;
+    }
+
+    @media (min-width: 768px) {
+        h6 {
+            @apply text-4xl font-minion font-bold italic;
+        }
+    }
+
+    p {
+        @apply text-lg font-minion font-bold italic;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            @apply text-2xl font-minion font-bold italic;
+        }
     }
 }

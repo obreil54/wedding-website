@@ -1,17 +1,16 @@
-<footer class="bg-primary-light w-full p-8 flex justify-between items-start">
-  <div class="text-white">
-    <h3 class="text-6xl mb-2"><%= wedding_days_left %> <span class="font-eddie">Days To Go</span></h3>
-    <h3>RSVP Opens</h3>
-    <h3>in May</h3>
-  </div>
-  <div class="text-right text-primary-dark">
-    <p>Venue Address</p>
-    <p>Strada Sicelle Loc. Le Filligare, 35</p>
-    <p>50028 San Donato in Poggio</p>
-    <p>Barberino Tavarnelle (Fi)</p>
-    <p>Italy</p>
-    <br>
-    <p class="text-secondary-dark">Illustrations & Design by the Bride,</p>
-    <p class="text-secondary-dark">Web Development by the Groom</p>
+<footer class="bg-primary-light w-full flex flex-col">
+  <div class="flex flex-col md:flex-row justify-between text-center md:text-left items-center md:items-start p-8 pb-0 pt-4 bg-cover bg-top min-h-[40vh]" style="background-image: url('<%= asset_path("footer-flowers.png") %>')">
+    <div class="text-accent">
+      <h3 class="text-4xl md:text-6xl mb-2"><%= wedding_days_left %> <span class="font-eddie">Days to go</span></h3>
+      <h3>RSVP Opens</h3>
+      <h3>in April</h3>
+    </div>
+    <div class="hidden md:block text-right text-primary-dark">
+      <h3 class="font-eddie text-4xl md:text-6xl">Venue Address</h3>
+      <p>Strada Sicelle Loc. Le Filligare, 35</p>
+      <p>50028 San Donato in Poggio</p>
+      <p>Barberino Tavarnelle (Fi)</p>
+      <p>Italy</p>
+    </div>
   </div>
 </footer>

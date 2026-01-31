@@ -1,66 +1,67 @@
 <div class="bg-primary-light w-full min-h-screen text-primary-dark">
     <%= render "shared/navbar" %>
-    <div class="flex flex-col justify-center items-start px-24 py-12">
+    <div class="flex flex-col justify-center items-start pr-0 pl-24 py-12">
         <div>
-            <h2 class="font-minion">The Venue</h2>
+            <h1 class="font-semibold text-accent font-eddie">The Venue</h1>
             <h1 class="font-bold">LE FILIGARE</h1>
-            <h5 class="text-white ml-24" style="font-style: normal">Wine & Country Relais</h5>
+            <h5 class="text-accent ml-24 text-primary-dark" style="font-style: normal">Wine & Country Relais</h5>
         </div>
         <div class="flex justify-betweeen items-center gap-12">
             <div class="space-y-10">
                 <h6 style="font-style: normal">is a family-owned organic winery with origins dating back to the Etruscan era, owned by the Cassetti Burchi family since the 1970s.</h6>
                 <h6 style="font-style: normal">Located in the heart of the Chianti Classico region between Florence and Siena, the working winery and countryside estate spans 60 hectares of vineyards, olive groves, gardens, and woodland.</h6>
             </div>
-            <%= image_tag "venue.jpg.webp" %>
+            <%= image_tag "venue.png", class: "w-4/7" %>
         </div>
     </div>
-    <div class="flex flex-col justify-center items-center px-24 py-12">
-        <h2 class="font-minion font-semibold">Getting there</h2>
-        <div class="flex justify-between items-center mt-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.019395661612!2d11.261524676494536!3d43.522788260855336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a35fd2df0eecf%3A0x910b8af0857ed8ff!2sLe%20Filigare%20Wine%20%26%20Country%20Relais!5e0!3m2!1sen!2suk!4v1767186695624!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="w-1/2 space-y-4">
-                <h6 style="font-style: normal">Le Filigare is located approximately:</h6>
-                <ul class="font-minion font-bold text-4xl list-disc ml-16">
-                    <li>40 minutes by car from Florence Amerigo Vespucci Airport (FLR)</li>
-                    <li>1 hour 20 minutes by car from Pisa Galileo Galilei Airport (PSA)</li>
-                </ul>
-                <h6 style="font-style: normal">Florence is easily accessible from Rome by train:</h6>
-                <ul class="font-minion font-bold text-4xl list-disc ml-16">
-                    <li>Florence ↔ Rome: ~1 hour 30 minutes via high-speed train</li>
-                </ul>
-                <h6 style="font-style: normal">A hired car or pre-arranged transfer is recommended, particularly for guests staying offsite or planning to explore the region. (more details on FAQ page) </h6>
-                <h6 style="font-style: normal">Flight Tips: Here are some general guidelines for booking flights for Italy</h6>
-                <h6 style="font-style: normal">For guests travelling from…</h6>
-                <h6 style="font-style: normal">The UK & Europe: Best fares are typically found 3–5 months in advance (May–July).</h6>
-                <h6 style="font-style: normal">The USA: It's recommended to book 5–7 months in advance (March–May) for the best availability and pricing.</h6>
-                <h6 style="font-style: normal">Australia & Asia:Long-haul routes tend to benefit from booking 6–8 months in advance (February–April).</h6>
-                <h6 style="font-style: normal">From Russia: XXXX</h6>
+    <div class="flex flex-col justify-center items-start px-24 py-12">
+        <div class="flex justify-center items-center w-full">
+            <div>
+                <h1 class="font-semibold text-accent font-eddie mb-24">Getting there</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.019395661612!2d11.261524676494536!3d43.522788260855336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a35fd2df0eecf%3A0x910b8af0857ed8ff!2sLe%20Filigare%20Wine%20%26%20Country%20Relais!5e0!3m2!1sen!2suk!4v1767186695624!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            <%= image_tag "travel.png", class:"w-1/2" %>
         </div>
     </div>
-    <div class="flex justify-between items-center px-24 py-12">
-        <div class="text-center w-1/2 space-y-10 mt-12">
-            <h2 class="font-minion font-semibold">Accomodation</h2>
-            <h6 style="font-style: normal">If You’re Staying Onsite</h6>
-            <h6 style="font-style: normal">Le Filigare features 14 apartments spread across its two small villages. To maximize the number of guests we’re able to host onsite, apartments will be allocated by us, and room sharing will be required in many cases.</h6>
-            <h6 style="font-style: normal">We’ll do our best to ensure everyone is comfortable and thoughtfully paired. If you have any specific needs or concerns, please don’t hesitate to reach out to us directly. You can find more information about onsite accommodation here: https://lefiligare.com/en/hospitality/</h6>
-            <h6 style="font-style: normal">All wedding events will take place on the estate. Additional details to be shared closer to the wedding date. </h6>
-            <h6 style="font-style: normal">If You’re Staying Elsewhere</h6>
-            <h6 style="font-style: normal">As much as we’d love to host everyone onsite, unfortunately it’s not possible to accommodate all guests at the venue. However, there are several wonderful options nearby, ranging from boutique hotels to agriturismi that we recommend:</h6>
-            <h6 style="font-style: normal">Recommendations nearby in Tuscany:</h6>
-            <ul class="font-minion font-bold text-4xl list-disc ml-16">
-                <li>Podere 1384 – Agriturismo / Resort ~10 minutes’ drive from the venue https://podere1384.it</li>
-                <li>Locanda di Pietracupa -  B&B ~10 minutes’ drive from the venue https://www.locandapietracupa.it/</li>
-                <li>Borgo Pietrafitta Relais – Resort Hotel & Apartments ~20 minutes’ drive from the venue https://www.borgopietrafitta.com/it/</li>
-                <li>Hotel Le Fontanelle – Luxury countryside hotel ~25 minutes’ drive https://www.fontanellestate.com/en/hotel-le-fontanelle-en?gad_source=1&gad_campaignid=21502167299&gbraid=0AAAAACRSzPDWnGlEzwhair8Y1CCV--IId&gclid=Cj0KCQiA6sjKBhCSARIsAJvYcpMOQSZSjwrpsuQXXQHAGLvCv8y8GrDi1nMg8SnuEa5gBxPotTdSxMMaAhFWEALw_wcB</li>
-            </ul>
-            <h6 style="font-style: normal">Recommendations in Siena:</h6>
-            <ul class="font-minion font-bold text-4xl list-disc ml-16">
-                <li>Hotel Italia Siena ~45-50 minutes’ drive from the venue</li>
-                <li>Villa Scacciapensieri - Boutique Hotel ~45-50 minutes’ drive from the venue</li>
-            </ul>
-            <h6 style="font-style: normal">Transport options for the wedding day (October 17th) will be shared closer to the date. We recommend booking accommodation early, as October is still a popular travel season in Tuscany.</h6>
+    <div class="flex justify-between items-end px-24 py-12">
+        <a href="https://lefiligare.com/en/hospitality/" target="_blank"><%= image_tag "guests.png" %></a>
+        <div class="w-1/2">
+            <h1 class="font-semibold text-accent font-eddie mb-24">Accommodation</h1>
+            <%= image_tag "room.webp" %>
         </div>
-        <%= image_tag "venue.png", class: "w-1/2" %>
+    </div>
+    <%= image_tag "offsite.png", class:"w-full my-12" %>
+    <%= image_tag "stay.png", class:"my-24 mx-auto" %>
+    <div class="flex justify-center items-center flex-col pb-12 pt-24">
+        <h1 class="font-semibold text-accent font-eddie">Area Guide</h1>
+        <div data-controller="drag-scroll" class="relative w-4/6 overflow-hidden my-0 mx-auto flex justify-center items-center pb-12 pt-16 text-accent">
+            <div data-drag-scroll-target="track" class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x select-none cursor-grab active:cursor-grabbing [-ms-overflow-style:none] [scrollbar-width:none]">
+                <div class="shrink-0 w-[60vw] sm:w-[40vw] md:w-[20vw] snap-start">
+                    <%= image_tag "carousel_1.jpeg", class: "w-full object-cover pointer-events-none h-4/6 mb-4" %>
+                    <p class="text-center text-lg" style="font-style: normal">Climb <%= link_to "Giotto's bell tower", "https://duomo.firenzepass.com/tickets-florence/?_gl=1*qkz8qz*_up*MQ..*_gs*MQ..&gclid=CjwKCAiA4KfLBhB0EiwAUY7GAe200X2c6BQB-jpGGD6l4wnEh0Q5FtOfwPjWflmvaiXuloYjwwtE7hoCy24QAvD_BwE&gbraid=0AAAAA_ZaZf0eW5jRHGkVB0_A2714HsjQh", class: "underline", target: "_blank" %> for a gorgeous view of the main piazza after checking out the <%= link_to "Uffizi Gallery", "https://www.uffizi-gallery-tickets.org/en?utm_source=google&utm_medium=cpc&utm_campaign=uffizi_eng_row_sea&utm_content=uffizi_eng_row&gad_source=1&gad_campaignid=23200279155&gbraid=0AAAAA-TVmo5nskFZlSzSOr8u9YOvjaYgN&gclid=CjwKCAiA4KfLBhB0EiwAUY7GAQEeO4--alb9jVenaetT8OtgjdOZHhNb2o9iDbwXEHcIrQ7PtC-SVhoCXEYQAvD_BwE", class: "underline", target: "_blank" %> or <%= link_to "Michelangelo's David", "https://accademia-gallery-tickets.org/en?utm_source=google&utm_medium=cpc&utm_campaign=duomo_eng_row_sea&utm_content=duomo_eng_row&gad_source=1&gad_campaignid=23395911081&gbraid=0AAAAA-TVmo48DUGeBskCEHF9Pxt7qYesA&gclid=CjwKCAiA4KfLBhB0EiwAUY7GATsR42VkGsBocuFg3XJc2xN0bMIpLy4VYbbqIsFCDjRDvOeRRN5-fxoCyFwQAvD_BwE", class: "underline", target: "_blank" %> and then grab a bite</p>
+                    <p class="text-center text-lg" style="font-style: normal">Our favorite spots in Florence: Trattoria Camillo, Trattoria Mario, Trattoria Sostanza, Trattoria Sabatino, Gustapizza, Gelateria Camina Giannotti, Gelateria Vivoli, Ditta Artiginale Cafe</p>
+                </div>
+                <div class="shrink-0 w-[60vw] sm:w-[40vw] md:w-[20vw] snap-start">
+                    <%= image_tag "carousel_2.JPG", class: "w-full object-cover pointer-events-none h-4/6 mb-4" %>
+                    <p class="text-center text-lg" style="font-style: normal">Wine: Head out to Val d'Orcia for some Brunello or the vineyards of Chianti, book a tasting at the <%= link_to "venue", "https://lefiligare.com/en/winetastings/", class: "underline", target: "_blank" %>, <%= link_to "Badia a Coltibuono", "https://shop.coltibuono.com/en/visit-and-tasting/", class: "underline", target: "_blank" %> or <%= link_to "Castello di Verrazzano", "https://book.verrazzano.com/tours?lang=en", class: "underline", target: "_blank" %> where they also produce their own balsamic vinegar.</p>
+                </div>
+                <div class="shrink-0 w-[60vw] sm:w-[40vw] md:w-[20vw] snap-start">
+                    <%= image_tag "carousel_3.jpg", class: "w-full object-cover pointer-events-none h-4/6 mb-4" %>
+                    <p class="text-center text-lg" style="font-style: normal">Truile hunting tours: October is truffle harvest season, go on a <%= link_to "guided hunt", "https://www.getyourguide.com/san-miniato-l102603/san-miniato-truffle-hunting-in-the-tuscan-countryside-t402057/?ranking_uuid=f2235869-02a3-4763-8571-6ece7f7fc32d", class: "underline", target: "_blank" %> in the forests near San Miniato or <%= link_to "San Gimignaro", "https://www.marronaia.com/shop/experiences/tasting-with-meal/truffle-lunch-and-truffle-hunting/?gad_source=1&gad_campaignid=19778446712&gbraid=0AAAAADPUZ-4JnsOx1LJK9PqEFlHoL0t0g&gclid=CjwKCAiA4KfLBhB0EiwAUY7GAW40NdMyjB80NSFfLditvROXQeWm5hwONKwiW2BOFOrpZlOIOEuoJRoCigQQAvD_BwE", class: "underline", target: "_blank" %> where you can learn alongside expert truffle hunters and then go for a tasting.</p>
+                </div>
+                <div class="shrink-0 w-[60vw] sm:w-[40vw] md:w-[20vw] snap-start">
+                    <%= image_tag "carousel_4.jpg", class: "w-full object-cover pointer-events-none h-4/6 mb-4" %>
+                    <p class="text-center text-lg" style="font-style: normal">Pasta making & cookery courses</p>
+                </div>
+                <div class="shrink-0 w-[60vw] sm:w-[40vw] md:w-[20vw] snap-start">
+                    <%= image_tag "carousel_5.jpg", class: "w-full object-cover pointer-events-none h-4/6 mb-4" %>
+                    <p class="text-center text-lg" style="font-style: normal">Guide to Siena coming soon!</p>
+                </div>
+            </div>
+            <style>
+                [data-drag-scroll-target="track"]::-webkit-scrollbar {display: none;}
+            </style>
+        </div>
     </div>
 </div>
+<%= render "shared/footer" %>

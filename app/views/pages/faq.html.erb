@@ -1,9 +1,9 @@
-<div class="bg-primary-light w-full min-h-[70vh] text-primary-dark">
+<div class="bg-primary-light w-full text-primary-dark">
     <%= render "shared/navbar" %>
-    <div class="max-w-3xl mx-auto divide-y divide-primary-dark-300">
+    <div class="max-w-4xl mx-auto divide-y divide-primary-dark-300 p-16">
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">Plus Ones</h6>
+                <h6 style="font-style: normal">Plus Ones / <span class="text-accent">Дополнительные гости</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -16,12 +16,13 @@
                 <p style="font-style: normal">
                     Due to venue capacity, we’re unfortunately unable to accommodate additional guests beyond those named on the invitation. Thank you so much for understanding.
                 </p>
+                <p class="mt-4 text-accent" style="font-style: normal">В связи с ограниченной вместимостью, к сожалению, мы не можем разместить дополнительных гостей помимо тех, кто указан в приглашении. Благодарим вас за понимание.</p>
             </div>
         </details>
 
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">What will the weather be like?</h6>
+                <h6 style="font-style: normal">What will the weather be like? / <span class="text-accent">Какая будет погода?</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -35,12 +36,14 @@
                     Mid-October in Tuscany is typically mild and pleasant, with average daytime temperatures around 20–24°C (68–75°F) and cooler evenings around 10–14°C (50–57°F). Expect mostly sunny days, with the possibility of some rain or wind.
                 </p>
                 <p class="mt-2" style="font-style: normal">Most events will take place outdoors, weather permitting. Backup plans are in place should conditions require moving indoors.</p>
+                <p class="mt-4 text-accent" style="font-style: normal">В середине октября в Тоскане обычно благоприятная и спокойная погода, со средней дневной температурой около 20–24°C и более прохладными вечерами около 10–14°C. Ожидаются преимущественно солнечные дни, с возможностью дождя или ветра.</p>
+                <p class="mt-2 text-accent" style="font-style: normal">Большинство мероприятий, если позволит погода, пройдут на открытом воздухе. На случай, если погодные условия потребуют переноса мероприятия в помещение, предусмотрены запасные планы.</p>
             </div>
         </details>
 
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">Should I hire a car?</h6>
+                <h6 style="font-style: normal">Should I hire a car? / <span class="text-accent">Стоит ли мне взять машину напрокат?</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -53,14 +56,17 @@
                 <p style="font-style: normal">
                     Renting a car can be a great option if you plan to explore Tuscany during your stay or are staying offsite. There is ample parking available at the venue.
                 </p>
-                <p class="mt-2" style="font-style: normal">For guests staying onsite we recommend comparing rental costs with shared airport transfers and coordinating with other guests where possible, all wedding events will take place across the venue so there may not be much need to drive during the long weekend.</p>
+                <p class="mt-2" style="font-style: normal">For guests staying onsite we recommend comparing rental costs with shared airport transfers and coordinating with other guests where possible, all wedding events will take place across the venue itself so there may not be much need to drive during the long weekend.</p>
                 <p class="mt-2" style="font-style: normal">Please note: guests with non-EU/UK driver’s licenses will need an International Driving Permit (IDP) to rent a car in Italy.</p>
+                <p class="mt-4 text-accent" style="font-style: normal">Аренда автомобиля может стать отличным вариантом, если вы планируете исследовать Тоскану во время своего пребывания или проживаете за пределами территории отеля. На территории мероприятия имеется достаточное количество парковочных мест.</p>
+                <p class="mt-2 text-accent" style="font-style: normal">Гостям, проживающим на территории комплекса, мы рекомендуем сравнить стоимость аренды автомобилей с групповыми трансферами из аэропорта и по возможности, скоординировать действия с другими гостями. Все свадебные мероприятия будут проходить на территории комплекса, поэтому в течение длинных выходных, возможно, не будет особой необходимости ездить на машине.</p>
+                <p class="mt-2 text-accent" style="font-style: normal">Обратите внимание: гостям с водительскими правами, выданными не в странах ЕС/Великобритании, для аренды автомобиля в Италии потребуется международное водительское удостоверение (IDP).</p>
             </div>
         </details>
 
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">Visas & Entry Requirements</h6>
+                <h6 style="font-style: normal">Visas & Entry Requirements / <span class="text-accent">Визы</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -71,15 +77,15 @@
 
             <div class="mt-3">
                 <p style="font-style: normal">
-                    For short tourist stays (under 90 days), U.S. passport holders do not currently need a visa to travel within most of Europe. However, an ETIAS travel authorization will be required for entry into the Schengen Area once implemented (expected in 2026).
+                    For short tourist stays (under 90 days), U.S. & U.K. passport holders do not currently need a visa to travel within most of Europe. However, an ETIAS travel authorisation will be required for entry into the Schengen Area once implemented, this is expected to start in late 2026. (more details <a href="https://etias.com/" class="underline" target="_blank">here</a>)
                 </p>
-                <p class="mt-2" style="font-style: normal">Гражданам России потребуется оформить шенгенскую визу. Если вам понадобятся какие-либо подтверждающие документы для подачи заявления, пожалуйста, свяжитесь с Илья.</p>
+                <p class="mt-4 text-accent" style="font-style: normal">Гражданам России потребуется оформить шенгенскую визу. Если вам понадобятся какие-либо подтверждающие документы для подачи заявления, пожалуйста, свяжитесь с Ильей.</p>
             </div>
         </details>
 
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">What time should I arrive?</h6>
+                <h6 style="font-style: normal">What time should I arrive? / <span class="text-accent">Во сколько мне следует приехать?</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -90,14 +96,16 @@
 
             <div class="mt-3">
                 <p style="font-style: normal">
-                    We recommend arriving by Friday afternoon to fully enjoy the weekend. The ceremony will take place on Saturday, October 17th.
+                    We recommend arriving by Friday afternoon to fully enjoy the weekend, which will begin with a welcome dinner that evening. For guests staying onsite, accommodation check-in begins from 3pm. The ceremony will take place on Saturday, October 17th.
                 </p>
+                <p class="mt-4 text-accent" style="font-style: normal">Мы рекомендуем прибыть к пятнице после обеда, чтобы в полной мере насладиться выходными, которые начнутся с приветственного ужина вечером. Для гостей, проживающих на территории отеля, заселение начинается с 15:00. Церемония состоится в субботу, 17 октября.</p>
+
             </div>
         </details>
 
         <details class="group py-4">
             <summary class="flex cursor-pointer items-center justify-between list-none">
-                <h6 style="font-style: normal">What should I wear?</h6>
+                <h6 style="font-style: normal">What should I wear? / <span class="text-accent">Дресс-код</span></h6>
                 <span
                     class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
                     aria-hidden="true"
@@ -108,9 +116,33 @@
 
             <div class="mt-3">
                 <p style="font-style: normal">
-                    Dress codes for each event can be found on the Event Schedule page. October evenings can be cool, so layering is encouraged.
+                    Dress codes for each event can be found on the <%= link_to "Event Schedule", event_path, class:"underline" %> page. October evenings can be cool, so layering is encouraged.
                 </p>
+                <p class="mt-4 text-accent" style="font-style: normal">Вечера в октябре могут быть прохладными, поэтому рекомендуется одеваться так, чтобы можно было подстроиться под погоду. Поскольку мероприятия проходят на открытом воздухе, на траве и брусчатке, мы советуем выбирать удобную обувь, подходящую для неровных поверхностей — хорошо подойдут туфли на толстом каблуке, танкетке или балетки.</p>
+                <p class="mt-2 text-accent" style="font-style: normal">Для приветственного ужина дресс-код — коктейльный. Для свадебной церемонии и приема — формальный. Для прощального ужина — повседневный.</p>
+            </div>
+        </details>
+
+        <details class="group py-4">
+            <summary class="flex cursor-pointer items-center justify-between list-none">
+                <h6 style="font-style: normal">Gifts / <span class="text-accent">Подарки</span></h6>
+                <span
+                    class="ml-4 transition-transform duration-300 group-open:rotate-90 text-2xl"
+                    aria-hidden="true"
+                >
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </summary>
+
+            <div class="mt-3">
+                <p style="font-style: normal">
+                    Your presence at our wedding is truly the greatest gift to us. We know that traveling to Tuscany is a significant commitment, and we have no expectations for anything additional.
+                </p>
+                <p class="mt-2" style="font-style: normal">However, if you do still wish to gift us something, we’ve put together a small registry <a href="https://www.weddingshop.com/giftlist/lindsayandilya" class="underline" target="_blank">here</a>.</p>
+                <p class="mt-4 text-accent" style="font-style: normal">Ваше присутствие на нашей свадьбе – это поистине величайший подарок для нас. Мы понимаем, что поездка в Тоскану — это серьезное решение, и у нас нет никаких дополнительных ожиданий.</p>
+                <p class="mt-2 text-accent" style="font-style: normal">Однако, если вы все же хотите что-нибудь нам подарить, мы составили небольшой список подарков, который вы можете найти <a href="https://www.weddingshop.com/giftlist/lindsayandilya" class="underline" target="_blank">здесь</a>.</p>
             </div>
         </details>
     </div>
 </div>
+<%= render "shared/footer" %>
