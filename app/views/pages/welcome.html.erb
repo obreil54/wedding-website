@@ -1,0 +1,21 @@
+<div class="min-h-screen bg-cover bg-bottom flex justify-start items-end p-8"
+     style="background-image: url('<%= asset_path("welcome-background.png") %>')">
+
+  <div class="flex flex-col items-center text-accent w-1/6">
+    <% if flash[:alert].present? %>
+      <p class="mb-4 text-xl"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with url: unlock_path, method: :post, local: true, class: "w-full flex flex-col items-center" do %>
+      <%= password_field_tag :password, nil,
+          placeholder: "password",
+          class: "text-center border-solid border-2 border-accent outline-none p-2 mb-4 font-minion rounded-full text-3xl w-3/4" %>
+
+      <button type="submit"
+              class="border-solid border-2 border-accent outline-none p-2 font-eddie flex justify-end items-center w-1/2 rounded-full hover:bg-accent hover:text-primary-dark transition-colors duration-200 cursor-pointer">
+        <p class="text-3xl mr-4">enter</p>
+        <i class="fa-solid fa-arrow-right text-2xl"></i>
+      </button>
+    <% end %>
+  </div>
+</div>
