@@ -1,30 +1,30 @@
 <div class="bg-primary-light w-full min-h-screen">
-  <div class="h-screen bg-cover bg-bottom text-primary-dark flex flex-col justify-between align-start" style="background-image: url('<%= asset_path("home-hero.JPG") %>')">
+  <div class="h-screen bg-cover bg-[60%_80%] md:bg-bottom text-primary-dark flex flex-col justify-start md:justify-between align-start" style="background-image: url('<%= asset_path("home-hero.JPG") %>')">
       <%= render "shared/navbar" %>
-      <div class="m-20">
-        <h3 class="w-[22.5%] text-center">OCT.16-19-26</h3>
-        <h1 class=w-[22.5%]>LINDSAY <span class="font-eddie">&</span> ILYA</h1>
-        <h2 class="w-[25%] text-right">Tuscany</h2>
+      <div class="m-8 md:m-20">
+        <h3 class="text-left md:w-[22.5%] text-center">OCT.16-19.26</h3>
+        <h1 class="w-[60%] md:w-[22.5%]">LINDSAY <span class="font-eddie">&</span> ILYA</h1>
+        <h2 class="w-[65%] md:w-[25%] text-right">Tuscany</h2>
       </div>
   </div>
-  <div class="flex justify-between items-start p-24 gap-32">
-    <div class="w-1/3">
-      <%= image_tag "russel-street.jpg" %>
+  <div class="flex flex-col md:flex-row justify-between items-start md:p-32 md:pt-24 pb-0 md:pb-0 md:gap-32">
+    <div class="md:w-1/3">
+      <%= image_tag "98.png" %>
     </div >
-    <div class="w-2/3 text-primary-dark space-y-10 mt-24">
-      <h5 class="italic font-bold font-minion">It all started at 98 Great Russell Street,</h6>
+    <div class="md:w-2/3 text-primary-dark space-y-10 mx-8 md:mt-24">
+      <h5 class="italic font-bold font-minion">It all started at 98 Great Russell Street...</h6>
       <h6>where Lindsay and Ilya met by chance after being randomly assigned as flatmates while studying in London.</h6>
-      <h6>Having grown up in Volgograd, Russia, and later moving to England for boarding school, Ilya was drawn to the idea of studying abroad again. He enrolled at Florida State University, spending his first year closer to home at FSU’s London campus.</h6>
-      <h6>Lindsay grew up in Florida and chose FSU for its international programs, spending the autumn of her second year in London and the following summer in Florence — where she fell in love first with Tuscany.</h6>
+      <h6>Ilya had enrolled at Florida State University and chose to spend his first year closer to home at their London campus. Lindsay grew up in Florida and chose FSU for its international programs, spending the autumn of her second year in London and the following summer in Florence,  where she fell in love first with Tuscany.</h6>
     </div>
   </div>
-  <div class="flex justify-end items-start py-4 px-16 gap-32">
-    <div class="w-1/2 text-primary-dark space-y-10 text-right mt-24">
-      <h6>When they reunited in Florida that autumn, Lindsay and Ilya realised their friendship had become something more. Over the next nine years, their relationship unfolded across chapters of life, eventually bringing them back to London, where they built a home together with their cat, Lailah.</h6>
-      <h6>They later returned to Florence to celebrate their fifth anniversary, making it feel like the perfect place to celebrate not just a wedding, but a story that spans continents and cultures.</h6>
+  <div class="flex flex-col-reverse md:flex-row justify-end items-start py-4 px-8 md:px-16 md:gap-32">
+    <div class="md:w-1/2 text-primary-dark space-y-10 text-left md:text-right md:mt-32">
+      <h6>When they met up again in Florida that autumn, what had started as a close friendship became something more. Over the next eight years, their relationship unfolded across different places and chapters of life, eventually bringing them back to London, where they built a home together with their cat, Lailah, who was a long way from Tallahassee.</h6>
+      <h6>After returning to Florence to celebrate their fifth anniversary, getting engaged in Venice, and with family and friends spread across the US, Russia, the UK and beyond, Italy felt like the perfect place to bring everyone together.</h6>
     </div>
-    <div class="w-1/6">
-      <%= image_tag "boat.JPG" %>
+    <div class="md:w-1/4">
+      <%= image_tag "boat.png" %>
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
