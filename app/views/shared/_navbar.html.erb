@@ -1,0 +1,38 @@
+<nav class="w-full flex items-center justify-between p-4 h-[12.5vh] relative">
+  <%= link_to root_path, class: "h-full flex items-center shrink-0" do %>
+    <%= image_tag "logo.png",
+          alt: "Home",
+          class: "h-full w-auto object-contain" %>
+  <% end %>
+
+  <!-- Desktop menu -->
+  <ul class="hidden md:flex gap-8 lg:gap-12 font-minion text-xl lg:text-4xl pr-4">
+    <li><%= link_to "TRAVEL & STAY", travel_path, class: "hover:text-secondary-dark transition-colors duration-200" %></li>
+    <li><%= link_to "EVENT SCHEDULE", event_path, class: "hover:text-secondary-dark transition-colors duration-200" %></li>
+    <li><%= link_to "FAQ", faq_path, class: "hover:text-secondary-dark transition-colors duration-200" %></li>
+  </ul>
+
+  <!-- Mobile button -->
+  <button
+    type="button"
+    class="md:hidden inline-flex items-center justify-center p-2 rounded"
+    aria-label="Open menu"
+    aria-controls="mobile-menu"
+    aria-expanded="false"
+    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+  >
+    <!-- simple hamburger -->
+    <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur border-t">
+    <ul class="flex flex-col gap-4 p-4 font-minion text-2xl">
+      <li><%= link_to "TRAVEL & STAY", travel_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
+      <li><%= link_to "EVENT SCHEDULE", event_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
+      <li><%= link_to "FAQ", faq_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
+    </ul>
+  </div>
+</nav>
