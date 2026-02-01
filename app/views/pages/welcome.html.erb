@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-cover bg-bottom flex justify-start items-end p-8"
+<div class="hidden min-h-screen bg-cover bg-bottom md:flex justify-start items-end p-8"
      style="background-image: url('<%= asset_path("welcome-background.png") %>')">
 
   <div class="flex flex-col items-center text-accent w-1/6">
@@ -15,6 +15,26 @@
               class="border-solid border-2 border-accent outline-none p-2 font-eddie flex justify-end items-center w-1/2 rounded-full hover:bg-accent hover:text-primary-dark transition-colors duration-200 cursor-pointer">
         <p class="text-3xl mr-4">enter</p>
         <i class="fa-solid fa-arrow-right text-2xl"></i>
+      </button>
+    <% end %>
+  </div>
+</div>
+
+<div class="md:hidden min-h-screen bg-primary-light bg-cover bg-bottom flex justify-end" style="background-image: url('<%= asset_path("welcome-background-mobile.png") %>')">
+  <div class="flex flex-col items-end text-accent w-2/5 mt-40">
+    <% if flash[:alert].present? %>
+      <p class="mb-2 text-lg mr-4"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with url: unlock_path, method: :post, local: true, class: "w-full flex flex-col items-center" do %>
+      <%= password_field_tag :password, nil,
+          placeholder: "password",
+          class: "text-center border-solid border-2 border-accent outline-none p-2 mb-4 font-minion rounded-full text-xl w-3/4" %>
+
+      <button type="submit"
+              class="border-solid border-2 border-accent outline-none p-2 font-eddie flex justify-end items-center w-1/2 rounded-full hover:bg-accent hover:text-primary-dark transition-colors duration-200 cursor-pointer">
+        <p class="text-xl mr-2">enter</p>
+        <i class="fa-solid fa-arrow-right text-lg"></i>
       </button>
     <% end %>
   </div>
