@@ -1,5 +1,5 @@
 <div class="bg-primary-light w-full min-h-screen">
-    <div class="h-[180vh] md:h-screen bg-cover bg-top text-primary-dark relative"
+    <div class="md:h-screen bg-cover bg-top text-primary-dark relative"
      style="background-image: url('<%= asset_path("event-hero.jpg") %>')">
 
         <%= render "shared/navbar" %>
@@ -11,11 +11,7 @@
         <%= image_tag "schedule.png",
                 class: "absolute top-3/5 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block" %>
         
-        <div class="md:hidden mt-8">
-            <%= image_tag "schedule_1.png", class:"mx-auto" %>
-            <%= image_tag "schedule_2.png", class:"mx-auto" %>
-            <%= image_tag "schedule_3.png", class:"mx-auto" %>
-        </div>
+        <%= image_tag "event-mobile.png", class:"md:hidden py-4" %>
     </div>
 
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-12 md:pl-24 pr-0 md:rgap-32">

@@ -40,7 +40,7 @@
     }
 
     h3 {
-        @apply text-2xl leading-[0.8] font-minion;
+        @apply text-xl leading-[0.8] font-minion;
     }
 
     @media (min-width: 768px) {
