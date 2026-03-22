@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get "travel", to: "pages#travel", as: "travel"
   get "faq", to: "pages#faq", as: "faq"
   get "event", to: "pages#event", as: "event"
+  get "success", to: "pages#success", as: "success"
+
+  resources :rsvps, only: [ :new, :create, :index ]
 end
