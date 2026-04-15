@@ -1,9 +1,12 @@
 <nav class="w-full flex items-center justify-between p-4 h-[12.5vh] relative">
-  <%= link_to root_path, class: "h-full flex items-center shrink-0" do %>
-    <%= image_tag "logo.png",
-          alt: "Home",
-          class: "h-full w-auto object-contain" %>
-  <% end %>
+  <div class="flex items-center gap-8 h-full">
+    <%= link_to root_path, class: "h-full flex items-center shrink-0" do %>
+      <%= image_tag "logo.png",
+            alt: "Home",
+            class: "h-full w-auto object-contain" %>
+    <% end %>
+    <%= link_to "RSVP", new_rsvp_path, class: "md:block text-4xl font-minion hidden text-secondary-dark border border-solid border-inherit rounded-full p-4 hover:text-accent hover:bg-secondary-dark hover:border-secondary-dark transition-colors duration-200" %>
+  </div>
 
   <!-- Desktop menu -->
   <ul class="hidden md:flex gap-8 lg:gap-12 font-minion text-xl lg:text-4xl pr-4">
@@ -29,6 +32,7 @@
   <!-- Mobile dropdown -->
   <div data-mobile-menu class="hidden md:hidden absolute top-full left-0 w-full bg-primary-light backdrop-blur border-t">
     <ul class="flex flex-col gap-4 p-4 font-minion text-2xl text-primary-dark">
+      <li><%= link_to "RSVP", new_rsvp_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
       <li><%= link_to "TRAVEL & STAY", travel_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
       <li><%= link_to "EVENT SCHEDULE", event_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
       <li><%= link_to "FAQ", faq_path, class: "block py-2 hover:text-secondary-dark transition-colors duration-200" %></li>
