@@ -1,10 +1,14 @@
 class RsvpsController < ApplicationController
   def new
     @rsvp = Rsvp.new
+    @guests= Guest.order(:full_name)
   end
 
   def create
-    @rsvp = Rsvp.new(rsvp_params)
+    @guests= Guest.order(:full_name)
+
+    @rsvp = Rsvp.find_or_initialize_by(guest_id: rsvp_params[:guest_id])
+    @rsvp.assign_attributes(rsvp_params)
 
     if @rsvp.save
       redirect_to success_path
@@ -14,7 +18,7 @@ class RsvpsController < ApplicationController
   end
 
   def index
-    @rsvps = Rsvp.all
+    @rsvps = Rsvp.includes(:guest).order(created_at: :desc)
   end
 
   private
