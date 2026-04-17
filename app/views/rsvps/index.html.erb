@@ -1,0 +1,69 @@
+<div class="bg-secondary-dark min-h-screen py-16 px-6 font-minion text-secondary-dark">
+  <div class="max-w-6xl mx-auto bg-accent p-8 md:p-12">
+    <div class="mb-8">
+      <h1 class="font-eddie font-normal text-5xl mb-2">RSVPs</h1>
+      <p class="text-xl">
+        Total responses: <%= @rsvps.count %>
+      </p>
+    </div>
+
+    <% if @rsvps.any? %>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-left text-xl">
+          <thead>
+            <tr class="border-b-2 border-secondary-dark">
+              <th class="py-4 pr-4">Guest</th>
+              <th class="py-4 pr-4">Email</th>
+              <th class="py-4 pr-4">Attending</th>
+              <th class="py-4 pr-4">Welcome Dinner</th>
+              <th class="py-4 pr-4">Wedding</th>
+              <th class="py-4 pr-4">Farewell Dinner</th>
+              <th class="py-4 pr-4">Dietary Requirements</th>
+              <th class="py-4 pr-4">Notes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @rsvps.each do |rsvp| %>
+              <tr class="border-b border-secondary-dark/30 align-top">
+                <td class="py-4 pr-4 font-bold">
+                  <%= rsvp.guest&.full_name || "Unknown guest" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.email %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.attending ? "Yes" : "No" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.event_1_attending ? "Yes" : "No" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.event_2_attending ? "Yes" : "No" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.event_3_attending ? "Yes" : "No" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.dietary_requirements.presence || "-" %>
+                </td>
+
+                <td class="py-4 pr-4">
+                  <%= rsvp.notes.presence || "-" %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% else %>
+      <p class="text-xl">No RSVPs yet.</p>
+    <% end %>
+  </div>
+</div>
