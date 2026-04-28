@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   get "success", to: "pages#success", as: "success"
 
   resources :rsvps, only: [ :new, :create, :index ]
+
+  get "rsvp_success", to: "rsvps#success", as: "rsvp_success"
 end

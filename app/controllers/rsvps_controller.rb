@@ -11,10 +11,13 @@ class RsvpsController < ApplicationController
     @rsvp.assign_attributes(rsvp_params)
 
     if @rsvp.save
-      redirect_to success_path
+      redirect_to rsvp_success_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def success
   end
 
   def index
