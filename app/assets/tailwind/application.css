@@ -82,4 +82,14 @@
             @apply text-2xl font-minion font-bold italic;
         }
     }
+
+    .bg-success {
+        background-image: url("success_mobile.png");
+    }
+
+    @media (min-width: 768px) {
+        .bg-success {
+            background-image: url("success.png");
+        }
+    }
 }

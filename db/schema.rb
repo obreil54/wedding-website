@@ -25,10 +25,10 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_22_191204) do
     t.boolean "attending", null: false
     t.datetime "created_at", null: false
     t.text "dietary_requirements"
-    t.string "email", null: false
-    t.boolean "event_1_attending", null: false
-    t.boolean "event_2_attending", null: false
-    t.boolean "event_3_attending", null: false
+    t.string "email"
+    t.boolean "event_1_attending"
+    t.boolean "event_2_attending"
+    t.boolean "event_3_attending"
     t.bigint "guest_id", null: false
     t.text "notes"
     t.datetime "updated_at", null: false
