@@ -1,21 +1,18 @@
 <div class="h-screen text-primary-dark bg-cover bg-top flex flex-col"
      style="background-image: url('<%= asset_path("rsvp-hero.jpg") %>')">
-
   <%= render "shared/navbar" %>
-
   <div class="flex-1 flex items-center justify-center">
     <%= image_tag "deadline.png", class: "md:w-1/3 w-5/6" %>
   </div>
-
 </div>
 <div class="bg-secondary-dark flex justify-center align-center font-minion">
-    <%= form_with model: @rsvp,
+  <%= form_with model: @rsvp,
         class:"bg-accent md:w-1/2 w-9/10 my-16 md:p-16 p-8 text-secondary-dark relative",
         id:"rsvp-form-section",
         data: { controller: "rsvp" } do |f| %>
-        <div class="relative mb-8">
-            <h5 class="font-eddie font-normal">Guest Name</h5>
-            <%= text_field_tag :guest_name, nil,
+    <div class="relative mb-8">
+      <h5 class="font-eddie font-normal">Guest Name</h5>
+      <%= text_field_tag :guest_name, nil,
                 autocomplete: "off",
                 placeholder: "Start typing your name...",
                 data: {
@@ -23,109 +20,94 @@
                     action: "input->rsvp#filter focus->rsvp#show blur->rsvp#hide"
                 },
                 class: "border border-2 md:text-3xl p-4 w-full" %>
-
-            <div data-rsvp-target="dropdown" 
+      <div data-rsvp-target="dropdown" 
                 class="absolute z-10 bg-accent w-full mt-1 max-h-60 overflow-y-auto hidden border">
-
-                <% @guests.each do |guest| %>
-                    <div
+        <% @guests.each do |guest| %>
+          <div
                         data-rsvp-target="option"
                         data-id="<%= guest.id %>"
                         data-name="<%= guest.full_name.downcase %>"
                         class="p-3 hover:bg-secondary-dark hover:text-accent cursor-pointer md:text-2xl"
                         data-action="mousedown->rsvp#select">
-
-                        <%= guest.full_name %>
-                    </div>
-                <% end %>
-            </div>
-
-            <%= f.hidden_field :guest_id, data: { rsvp_target: "guestId" } %>
-
-            <% if @rsvp.errors[:guest_id].any? %>
-                <% @rsvp.errors[:guest_id].each do |error| %>
-                    <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
-                <% end %>
-            <% end %>
-        </div>
-
-        <div class="mb-8"> 
-            <h5 class="font-eddie font-normal">Will you be attending our wedding?</h5>
-            <div class="flex gap-4 flex-col md:text-3xl" >
-                <label class="flex align-center gap-4">
-                    <%= f.radio_button :attending, true,
+            <%= guest.full_name %>
+          </div>
+        <% end %>
+      </div>
+      <%= f.hidden_field :guest_id, data: { rsvp_target: "guestId" } %>
+      <% if @rsvp.errors[:guest_id].any? %>
+        <% @rsvp.errors[:guest_id].each do |error| %>
+          <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="mb-8">
+      <h5 class="font-eddie font-normal">Will you be attending our wedding?</h5>
+      <div class="flex gap-4 flex-col md:text-3xl" >
+        <label class="flex align-center gap-4">
+          <%= f.radio_button :attending, true,
                         class:"accent-secondary-dark md:w-8 md:h-8",
                         data: { action: "change->rsvp#updateAttendanceFields" } %>
-                    Yes, happily accept
-                </label>
-
-                <label class="flex align-center gap-4">
-                    <%= f.radio_button :attending, false,
+          Yes, happily accept
+        </label>
+        <label class="flex align-center gap-4">
+          <%= f.radio_button :attending, false,
                         class:"accent-secondary-dark md:w-8 md:h-8",
                         data: { action: "change->rsvp#updateAttendanceFields" } %>
-                    No, regretfully decline
-                </label>
-            </div>
-            <% if @rsvp.errors[:attending].any? %>
-                <% @rsvp.errors[:attending].each do |error| %>
-                    <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
-                <% end %>
-            <% end %>
+          No, regretfully decline
+        </label>
+      </div>
+      <% if @rsvp.errors[:attending].any? %>
+        <% @rsvp.errors[:attending].each do |error| %>
+          <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div data-rsvp-target="yesFields" class="hidden">
+      <div class="mb-8">
+        <h5 class="font-eddie font-normal">Which events are you able to attend?</h5>
+        <div class="flex gap-4 flex-col md:text-3xl">
+          <label class="flex align-center gap-4">
+            <%= f.check_box :event_1_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
+            <span class="font-bold">Welcome Dinner </span>on Friday the 16th
+          </label>
+          <label class="flex align-center gap-4">
+            <%= f.check_box :event_2_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
+            <span class="font-bold">Wedding Ceremony & Reception </span>on Saturday the 17th
+          </label>
+          <label class="flex align-center gap-4">
+            <%= f.check_box :event_3_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
+            <span class="font-bold">Farewell Dinner </span>on Sunday the 18th
+          </label>
         </div>
-
-
-        <div data-rsvp-target="yesFields" class="hidden">
-            <div class="mb-8">
-                <h5 class="font-eddie font-normal">Which events are you able to attend?</h5>
-                <div class="flex gap-4 flex-col md:text-3xl">
-                    <label class="flex align-center gap-4">
-                        <%= f.check_box :event_1_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
-                        <span class="font-bold">Welcome Dinner </span>on Friday the 16th
-                    </label>
-
-                    <label class="flex align-center gap-4">
-                        <%= f.check_box :event_2_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
-                        <span class="font-bold">Wedding Ceremony & Reception </span>on Saturday the 17th
-                    </label>
-
-                    <label class="flex align-center gap-4">
-                        <%= f.check_box :event_3_attending, class:"accent-secondary-dark md:w-8 md:h-8" %>
-                        <span class="font-bold">Farewell Dinner </span>on Sunday the 18th
-                    </label>
-                </div>
-                <% if @rsvp.errors[:base].any? %>
-                    <% @rsvp.errors[:base].each do |error| %>
-                        <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
-                    <% end %>
-                <% end %>
-            </div>
-
-            <div class="mb-8">
-                <h5 class="font-eddie font-normal mb-3">Do you have any dietary requirements?</h5>
-                <%= f.text_area :dietary_requirements, rows:4, class:"border border-2 md:text-3xl p-4 w-full" %>
-            </div>
-
-            <div class="mb-8">
-                <h5 class="font-eddie font-normal">Guest Email</h5>
-                <%= f.email_field :email, class:"border border-2 md:text-3xl p-4 w-full" %>
-                <% if @rsvp.errors[:email].any? %>
-                    <% @rsvp.errors[:email].each do |error| %>
-                        <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
-                    <% end %>
-                <% end %>
-            </div>
-        </div>
-
-        <div class="mb-8 hidden" data-rsvp-target="noFields">
-            <%= f.text_area :notes, rows:4, class:"border border-2 md:text-3xl p-4 w-full", placeholder: "Start typing your message..." %>
-        </div>
-        
-        <div data-rsvp-target="submitButton" class="hidden">
-            <%= f.submit "Submit RSVP", class: "md:text-3xl font-minion border border-solid rounded-full p-4 text-accent bg-accent border-secondary-dark text-secondary-dark hover:bg-secondary-dark hover:text-accent transition-colors duration-200 cursor-pointer" %>
-        </div>
-        <div class="absolute -bottom-12 md:-right-12 -right-4 pointer-events-none md:w-40 md:h-40 w-24 h-24">
-            <%= image_tag "seal.png" %>
-        </div>
-    <% end %>
+        <% if @rsvp.errors[:base].any? %>
+          <% @rsvp.errors[:base].each do |error| %>
+            <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="mb-8">
+        <h5 class="font-eddie font-normal mb-3">Do you have any dietary requirements?</h5>
+        <%= f.text_area :dietary_requirements, rows:4, class:"border border-2 md:text-3xl p-4 w-full" %>
+      </div>
+      <div class="mb-8">
+        <h5 class="font-eddie font-normal">Guest Email</h5>
+        <%= f.email_field :email, class:"border border-2 md:text-3xl p-4 w-full" %>
+        <% if @rsvp.errors[:email].any? %>
+          <% @rsvp.errors[:email].each do |error| %>
+            <p class="mt-2 text-secondary-light md:text-xl"><%= error.capitalize %></p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="mb-8 hidden" data-rsvp-target="noFields">
+      <%= f.text_area :notes, rows:4, class:"border border-2 md:text-3xl p-4 w-full", placeholder: "Start typing your message..." %>
+    </div>
+    <div data-rsvp-target="submitButton" class="hidden">
+      <%= f.submit "Submit RSVP", class: "md:text-3xl font-minion border border-solid rounded-full p-4 text-accent bg-accent border-secondary-dark text-secondary-dark hover:bg-secondary-dark hover:text-accent transition-colors duration-200 cursor-pointer" %>
+    </div>
+    <div class="absolute -bottom-12 md:-right-12 -right-4 pointer-events-none md:w-40 md:h-40 w-24 h-24">
+      <%= image_tag "seal.png" %>
+    </div>
+  <% end %>
 </div>
 <%= render "shared/footer" %>

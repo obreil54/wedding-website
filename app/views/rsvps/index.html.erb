@@ -6,7 +6,6 @@
         Total responses: <%= @rsvps.count %>
       </p>
     </div>
-
     <% if @rsvps.any? %>
       <div class="overflow-x-auto">
         <table class="w-full border-collapse text-left text-xl">
@@ -22,38 +21,30 @@
               <th class="py-4 pr-4">Notes</th>
             </tr>
           </thead>
-
           <tbody>
             <% @rsvps.each do |rsvp| %>
               <tr class="border-b border-secondary-dark/30 align-top">
                 <td class="py-4 pr-4 font-bold">
                   <%= rsvp.guest&.full_name || "Unknown guest" %>
                 </td>
-
                 <td class="py-4 pr-4">
-                  <%= rsvp.email %>
+                  <%= rsvp.email.presence || "-" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.attending ? "Yes" : "No" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.event_1_attending ? "Yes" : "No" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.event_2_attending ? "Yes" : "No" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.event_3_attending ? "Yes" : "No" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.dietary_requirements.presence || "-" %>
                 </td>
-
                 <td class="py-4 pr-4">
                   <%= rsvp.notes.presence || "-" %>
                 </td>
